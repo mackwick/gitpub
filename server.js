@@ -10,14 +10,17 @@ const port = 3000
 
 //********Routes */
 
-//Root route
+//Index route
 app.get("/", (req, res) => {
     res.send("<h1>Welcome to the Gitpub App!</h1>")
 })
 
-//JSON db route
+
+
+
+//Show route
 app.get("/drinks", (req, res) => {
-    res.send(drinks)
+    res.render("index.ejs")
 })
 
 
