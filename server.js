@@ -23,7 +23,8 @@ app.get("/drinks", (req, res) => {
 //Show route
 app.get("/drinks/:id", (req, res) => {
     const id = req.params.id
-    res.send(drinks[id])
+    const drink = drinks[id]
+    res.render("show.ejs", {drink, id})
 })
 
 
