@@ -13,7 +13,7 @@
         
         <% for (let i = 0; i < drinks.length; i++){ %>
 
-            <li id="drink-names"><%= drinks[i].name %></li>
+            <a href="/drinks/<%= i %>"><li id="drink-names"><%= drinks[i].name %></li></a>
     
         <% } %>
 
@@ -30,6 +30,15 @@
         #drink-names {
             text-transform: capitalize;
         }
+
+        a:link, a:visited {
+            color: blanchedalmond
+        }
+
+        a:active {
+            color: goldenrod;
+        }
+
     </style>
 </body>
 </html>
