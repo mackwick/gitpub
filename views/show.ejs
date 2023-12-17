@@ -7,10 +7,13 @@
     <title>GitPub</title>
 </head>
 <body>
-    <h1>At foo bar</h1>
-    <h2><%= drink.name %></h2>
+    <h1>At Foo Bar</h1>
     <img src="<%= drink.image %>.png">
-    <h3><%= drink.price %></h3>
+    <div>
+        <h2><%= drink.name %></h2>
+        <h3>$<%= drink.price %></h3>     
+    </div>
+
     <a href="/drinks">Back to main page</a>
 
     <style>
@@ -18,9 +21,23 @@
             color: blanchedalmond;
             background-color: rgb(105, 36, 36);
             font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
         }
-        #drink-names {
+
+        div {
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        h2 {
             text-transform: capitalize;
+        }
+        img {
+            width: 300px;
         }
         a:link, a:visited {
             color: blanchedalmond

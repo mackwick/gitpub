@@ -12,7 +12,7 @@
     <ul>
         
         <% for (let i = 0; i < drinks.length; i++){ %>
-            <a href="/drinks/<%= i %>"><li id="drink-names"><%= drinks[i].name %></li></a>
+            <a href="/drinks/<%= i %>"><li id="drink-names"><img src="<%= drinks[i].image %>.png"><%= drinks[i].name %></li></a>
         <% } %>
 
     </ul>
@@ -23,10 +23,34 @@
             color: blanchedalmond;
             background-color: rgb(105, 36, 36);
             font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 800px;
         }
 
         #drink-names {
+            width: 200px;
+            height: 200px;
             text-transform: capitalize;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            padding: 10px 20px;
         }
 
         a:link, a:visited {
