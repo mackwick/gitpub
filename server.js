@@ -15,9 +15,9 @@ app.get("/", (req, res) => {
     res.send("<h1>Welcome to the Gitpub App!</h1>")
 })
 
-//JSON db route
+//Index route
 app.get("/drinks", (req, res) => {
-    res.send(drinks)
+    res.render("index.ejs", {drinks})
 })
 
 

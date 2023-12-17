@@ -9,13 +9,26 @@
 <body>
     <h1>Welcome to gitPub!</h1>
 
+    <ul>
+        
+        <% for (let i = 0; i < drinks.length; i++){ %>
+
+            <li id="drink-names"><%= drinks[i].name %></li>
     
+        <% } %>
+
+    </ul>
 
     <style>
+
         body {
             color: blanchedalmond;
             background-color: rgb(105, 36, 36);
             font-family: 'Poppins', sans-serif;
+        }
+
+        #drink-names {
+            text-transform: capitalize;
         }
     </style>
 </body>
