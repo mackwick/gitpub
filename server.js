@@ -20,6 +20,12 @@ app.get("/drinks", (req, res) => {
     res.render("index.ejs", {drinks})
 })
 
+//Show route
+app.get("/drinks/:id", (req, res) => {
+    const id = req.params.id
+    res.send(drinks[id])
+})
+
 
 //********Server listen */
 app.listen(port, () => {
